@@ -18,17 +18,17 @@ def get_exchange_rates():
 def index():
     exchange_rate = None
     currency_code = None
-    error = None
+    
      
     if request.method == 'POST':
-        currency_code = request.form['currency'].upper()
+        currency_code = request.form['currency']
         exchange_rates = get_exchange_rates()
 
         for label, content in exchange_rates.items():
             if label == currency_code:
                 exchange_rate = content[0]
 
-    return render_template('index.html', exchange_rate=exchange_rate, currency_code=currency_code, error=error)
+    return render_template('index.html', exchange_rate=exchange_rate, currency_code=currency_code)
 
 if __name__ == '__main__':
     app.run(debug=True)
