@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Rate Lookup</title>
+</head>
+<body>
+    <h1>Today's Euro exchange rate</h1>
+    
+    <form method="POST">
+        <label for="currency">Enter Currency Code: </label>
+          <select id="currency" name="currency">
+            <option value="USD">USD</option>
+            <option value="GBP">GBP</option>
+            <option value="PLN">PLN</option>
+            <option value="HUF">HUF</option>
+            <option value="CZK">CZK</option>
+            <option value="NOK">NOK</option>
+            <option value="SEK">SEK</option>
+            <option value="RON">RON</option>
+            <option value="CAD">CAD</option>
+            <option value="CNY">CNY</option>
+            <option value="JPY">JPY</option>
+            <option value="DKK">DKK</option>
+            <option value="BGN">BGN</option>
+            <option value="CHF">CHF</option>
+            <option value="TRY">TRY</option>
+            <option value="AUD">AUD</option>
+            <option value="INR">INR</option>
+            <option value="ILS">ILS</option>
+            <option value="NZD">NZD</option>
+            <option value="KRW">KRW</option>
+          </select>
+          <button type="submit">Submit</button>
+    </form>
+
+    {% if exchange_rate %}
+        <p>1 EUR = {{ exchange_rate }} {{ currency_code }}</p>
+    {% endif %}
+    
+    {% if error %}
+        <p style="color:red">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
