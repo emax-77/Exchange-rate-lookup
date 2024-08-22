@@ -2,7 +2,7 @@
 
 # Current EUR exchange rate
 
-It is a simple web application that displays the current euro exchange rate. The app gets the exchange rate from the European Central Bank. It retrieves the current CSV file from https://nbs.sk/export/sk/exchange-rate/latest/csv
+It's a simple web application that displays the current EURO exchange rate. The app gets the exchange rate from the European Central Bank. It retrieves the current CSV file from https://nbs.sk/export/sk/exchange-rate/latest/csv
 
 ## How to run
 1. Clone the repository
