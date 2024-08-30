@@ -1,0 +1,21 @@
+        /* CSS to center everything */
+        body {
+            display: flex;
+            justify-content: center; /* Centers content horizontally */
+            align-items: center;    /* Centers content vertically */
+            min-height: 100vh;      /* Full viewport height */
+            margin: 0;              /* Remove default margin */
+            flex-direction: column; /* Stack elements vertically */
+            text-align: center;     /* Centers text */
+        }
+
+        form {
+            font-size: larger;
+            font-style: italic;
+        }
+
+        div {
+            font-size: large;
+            font-weight: bolder;
+            color: red;
+        }
