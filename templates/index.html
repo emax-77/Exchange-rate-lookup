@@ -4,10 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exchange Rate Lookup</title>
+    <style>
+        /* CSS to center everything */
+        body {
+            display: flex;
+            justify-content: center; /* Centers content horizontally */
+            align-items: center;    /* Centers content vertically */
+            min-height: 100vh;      /* Full viewport height */
+            margin: 0;              /* Remove default margin */
+            flex-direction: column; /* Stack elements vertically */
+            text-align: center;     /* Centers text */
+        }
+
+        section, form {
+            margin-bottom: 20px; /* Adds space between sections */
+        }
+
+        form {
+            font-size: larger;
+            font-style: italic;
+        }
+
+        div {
+            font-size: large;
+            font-weight: bolder;
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <h1>Today's Euro exchange rate</h1>
-    
+            
+    <h1>Today's EUR exchange rate</h1>
+    <img src="/static/EU flag.png" alt="">
+      
     <form method="POST">
         <label for="currency">Enter Currency Code: </label>
           <select id="currency" name="currency">
@@ -35,12 +64,14 @@
           <button type="submit">Submit</button>
     </form>
 
-    {% if exchange_rate %}
-        <p>1 EUR = {{ exchange_rate }} {{ currency_code }}</p>
-    {% endif %}
-    
-    {% if error %}
-        <p style="color:red">{{ error }}</p>
-    {% endif %}
+    <div>
+        {% if exchange_rate %}
+            <p>1 EUR = {{ exchange_rate }} {{ currency_code }}</p>
+        {% endif %}
+        
+        {% if error %}
+            <p style="color:red">{{ error }}</p>
+        {% endif %}
+    </div>
 </body>
 </html>
